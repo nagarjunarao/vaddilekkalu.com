@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function calculates()
+{
+var a=document.getElementById("dateinput1").value;
+var b=document.getElementById("dateinput2").value;
+var c=new Date(a);
+var d=new Date(b);
+var diff=d.getTime()-c.getTime();
+var result=diff/(1000*60*60*24);
+var vaddi=document.getElementById("vaddi").value;
+var amount=document.getElementById("amount").value;
+var e=amount/100;
+var f=e*vaddi;
+var g=f*12;
+var h=g/365;
+var i=h*result;
+return document.getElementById("i").innerHTML=i+"వడ్డి";
+}
+</script>
+</head>
+<body bgcolor="blue">
+<center><h2 style="color:white">
+తీసుకున్న తేది :  <input type="date" id="dateinput1" name="vstart"><br>
+ఈరోజు  తేది      :  <input type="date" id="dateinput2" name="vend"><br>
+డబ్బు                :  <input type="number" id="amount" name="amount"><br>
+వడ్డి                   :  <input type="number" id="vaddi"  name="vaddi"><br><br>
+<button style="background-color:white;color:red;height:40px;width:150px;font-size:20" onclick="calculates()"> లెక్కించండి </button>
+<h3 style="color:white;font-size:30" id="i" align="center"></h3>
+</h2>
+</center>
+</body>
+</html>
